@@ -10,13 +10,12 @@ async function getBookById(id: string): Promise<Book> {
 
 export async function GET(
   req: NextRequest,
-  context: { params: { id: string } }
+  { params }: { params: { id: string } } // ✅ 올바른 구조
 ) {
   try {
-    const id = context.params.id; 
-    // const { id } = params;
-    const book = await getBookById(id);
-    const salesData = await query('SELECT * FROM Sales WHERE book_id = $1', [id]);
+    const book = await getBookById(params.id);
+    const salesData = await query('SELECT * FROM Sales WHERE book_id = $1', [params.id]);
+    
     return NextResponse.json({
       ...book,
       salesData
