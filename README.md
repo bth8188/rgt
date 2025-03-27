@@ -1,36 +1,19 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+### RGT 과제
 
-## Getting Started
+## db 설정
+- 현재 db는 vercel에서 제공하는 neon postgreSQL을 사용중입니다.
+- 만일 다른 db를 사용하고 싶으시다면 프로젝트 루트에 있는 neon_sql을 이용하여 테이블을 만들 수 있습니다.
+- 그렇지만 src/app/lib/db.ts를 neon에서 제공하는 연결 도구를 사용중이라 권장하지 않습니다.
+- 기존 .env 파일의 경우 메일로 동봉해 드리겠습니다.
 
-First, run the development server:
+## 실행
+- npm run dev로 실행시 next 개발 모드로 실행이 가능합니다.
+- npm run build로 프로젝트 빌드 이후 npm start를 실행시 빌드된 코드를 실행해보실 수 있습니다.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 기타
+- 현재 리스트의 경우 캐싱을 60초로 처리해두어 데이터가 즉각적으로 반영이 안되는 부분을 확인 하실수 있습니다.
+- 실제 서비스에서는 이렇게 길게 적용하지 않지만 수월한 확인을 위해서 극단적으로  값을 넣어두었습니다.
+- 무료 DB라 외국에 서버가 있고 제한이 있어서 느립니다.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 확인 링크
+- https://rgt-lhfjt68vq-taehee-baes-projects.vercel.app/books
